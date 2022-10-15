@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <div>
+    <form action="../Servlet4_Get_Client_Input"><!--입력 처리 form 태그 서블릿 매칭 주소를 입력 -->
+      <div>
+        <label>"안녕하세요"를 몇 번 듣고 싶으세요?</label>
+      </div>
+      <div>
+        <input type="text" name="cnt" /> <!-- name 속성은 값을 실어나르는 이름을 책임짐-->
+        <input type="submit" name="출력" />
+      </div>
+    </form>
+    <!-- 전송누르면 액션에 입력한: URL?cnt=3   이런식으로 전송됨 -->
+  </div>
+</body>
+</html>

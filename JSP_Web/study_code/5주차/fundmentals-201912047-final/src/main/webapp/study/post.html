@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="../Servlet5_Post" method="post"><!--입력 처리 form 태그 서블릿 매칭 주소를 입력 -->
+    <!-- 쿼리스트링은 옵션값 수준임 ex 햄버거 치즈 빼주세요 정도로 해야지 아래처럼 장문으로 입력하면 안됨
+    URL 길이 제한도 있고 <form action="../Servlet5_Post"> 이렇게만 보내면 즉 쿼리스트링으로 전달 되는 것임
+    메서드를 post로 해주면
+    아무리 입력하고 전송해도 쿼리스트링 안보임
+    문서 요청 바디안에 넣어주는 것임
+    요청 바디는 제한이 없음 큰 데이터 넣어도 상관 없음
+    보안도 좋음
+
+
+    -->
+    <div>
+       <label>제목:</label><input name="title" type="text">
+    </div>
+    <div>
+        <label>내용:</label>
+        <textarea name="content"></textarea>
+    </div>
+    <div>
+        <input type="submit" name="등록" />
+    </div>
+</form>
+</body>
+</html>
