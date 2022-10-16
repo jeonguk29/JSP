@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="../Servlet25state_save" method="post">
+    <!-- 상태 유지를 위한 5가지 방법
+     웹에서도 전역 변수 같은 애들이 필요함 서블릿 한번 메모리에 올라왔다 사라지면 값 끝이라 어딘가 저장해줄 놈이 필요
+     그런 게 바로 서블릿 컨테이너 안에 서블릿 Context임 : 서블릿들이 서로 문맥을 이어갈수 있도록 지원하는 저장소
+
+     바로 아래 3가지가 서블릿 Context 대표적
+     application
+     session
+     cookie
+
+     hidden input
+     querystring
+     -->
+    <div>
+        <label>x : </label>
+        <input name="v" type="text">
+    </div>
+    <div>
+        <input type="submit" name="operator" value="+" />
+        <input type="submit" name="operator" value="-" />
+        <input type="submit" name="operator" value="=" /> <!-- 네임 같아도 됨 서브밋은 둘 중 하나만 눌러서 갈거 라  -->
+    </div>
+</form>
+</body>
+</html>

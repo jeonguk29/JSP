@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="../Servlet24array_input" method="post">
+    <!-- 이렇게 같은 이름 맞춰주면 배열로 감
+    받는 쪽은 배열로 받아서 반복문 등으로 활용 가능함 -->
+    <div>
+        <label>x</label><input name="num" type="text">
+        <label>x</label><input name="num" type="text">
+        <label>x</label><input name="num" type="text">
+        <label>x</label><input name="num" type="text">
+    </div>
+
+    <div>
+        <input type="submit" name="operator" value="덧셈" />
+    </div> <!-- 서버 전달시 num=1&num=2&num=3 이런식임 -->
+</form>
+</body>
+</html>
