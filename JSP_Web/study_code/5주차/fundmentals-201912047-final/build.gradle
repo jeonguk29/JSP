@@ -1,7 +1,11 @@
 plugins {
     id 'java'
     id 'war'
+    // Apply GraalVM Native Image plugin
+    id 'org.graalvm.buildtools.native' version '0.9.15'
 }
+
+
 
 group 'iducs.javaweb'
 version '1.0-SNAPSHOT'

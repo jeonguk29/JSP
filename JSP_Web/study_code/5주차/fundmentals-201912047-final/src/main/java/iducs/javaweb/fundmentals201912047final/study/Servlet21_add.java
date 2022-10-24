@@ -26,7 +26,7 @@ public class Servlet21_add extends HttpServlet {
         int y = 0;
 
         if(!x_.equals("")) x = Integer.parseInt(x_);
-        if(!y_.equals("")) x = Integer.parseInt(y_);
+        if(!y_.equals("")) y = Integer.parseInt(y_);
 
         int result = x + y;
         res.getWriter().printf("result is %d\n", result);

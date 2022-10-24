@@ -57,7 +57,7 @@ public class Servlet27_Session extends HttpServlet {
 
 
         쿠키는 값을 사용자가 가지고 다니는것임 (헬스장 지물건 지가 가지고 다님)
-        
+
 
          */
 
