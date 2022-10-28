@@ -1,0 +1,38 @@
+webapp/form.jsp -> FormController (uri : /controllers) 의 doPost() ->DAO 객체에게 
+질의 처리에 필요한 매개변수 값을 전달 -> DAO 질의 처리 -> 처리 결과 DTO 객체 (select)/ 정수값(insert, update, delete - 성공 1, 실패 0) 로 반환 
+-> 반환된 DTO 객체를 view 전달(request.setAttribute() 메소드 활용)
+-> view 에서 DTO 객체를 처리(scriptlet or EL)하여 응답을 사용자에게 전달  
+
+jsp 스크립트 EL 다 사용함
+스크립트 <% %> 한 부분들 
+EL ${} 한 부분들임 
+
+
+0. 사용자는 폼이나 하이퍼링크로 요청함 
+1. 사용자의 요청을 받아(controller - 요청 제어)
+: xxxController
+
+2. 모델 처리 요소를 활용하여 데이터를 처리하고 
+(Model : DAO - DTO -> repository, domain, entity)
+: xxxDAO, xxxDTO
+
+3.(데이터를 전달받은)View가 응답 컨텐츠를 생성
+: createForm.jsp (x) -> create-from.jsp (URL과 연관되어 있음)
+4. 사용자에게 응답
+
+MVC Model2 
+- 연관된 기능(관심부분만 집중)별로 프로그램을 작성하고, 유지보수 할 수 있다.
+
+
+(모델) 처리한걸 뷰에게 전달해주고 뷰가 응답 하는 것임 
+
+
+레스트 방식 정보만 주는 방식이면 
+뷰를 프론트 엔드 어떤걸 쓰던 상관 없음
+
+우리가 하는건 mpa 방식임 처리컨트롤러 까지 통째로 주는 것임 
+spa는 네크워크 타고오는 양이 작음 (클라이언트가 좋아야함)
+mpa는 네트워크 속도가 중요함
+
+레스트 방식에 spa 요즘 폰 컴퓨터 성능이 좋아서 괜찮음 + 보안 
+ ---------------------
