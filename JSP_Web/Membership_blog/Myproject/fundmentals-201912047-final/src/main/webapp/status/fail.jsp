@@ -1,0 +1,58 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %> <!-- 이페이지 읽을때 인코딩
+
+// 서블릿으로 만들려면 답이 없지만 jsp로 하니까
+이코드 하나만 가져오면 동작함
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Clean Blog - Start Bootstrap Theme</title>
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="../css/styles.css" rel="stylesheet" />
+</head>
+<body>
+<!-- Navigation-->
+<%@include file="../main/nav.jsp"%> <!-- 컴파일 시점에 포함-->
+<!-- Page Header-->
+<header class="masthead" style="background-image: url('../assets/img/about-bg.jpg')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="page-heading">
+                    <h1>작업 처리 결과</h1>
+                    <span class="subheading">${message}</span>
+                    <%-- setAttribute로 설정한 속성값을 EL을 사용해서 접근
+                    --%>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Main Content-->
+<main class="mb-4">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+               <p> 요청하신 작업이 정상처리되지 않았습니다. 불편을 드려 죄송합니다.</p>
+            </div>
+        </div>
+    </div>
+</main>
+<!-- Footer-->
+<%@include file="../main/footer.jsp"%> <!-- 컴파일 시점에 포함-->
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="../js/scripts.js"></script>
+</body>
+</html>
